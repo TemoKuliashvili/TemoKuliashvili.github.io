@@ -1,0 +1,236 @@
+.contact{
+    overflow: hidden;
+}
+
+.contact__inner {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+ .contactAnim{
+        max-width: 300px;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 50px;
+        transform: translateX(-150%);
+}
+ .contactAnim-static{
+        max-width: 300px;
+        width: 100%;
+        height: 300px;
+        margin-bottom: 50px;
+        display: none;
+}
+
+
+.about__title-contact {
+    margin-bottom: 50px;
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.aboutTitle__inner-contact {
+    text-align: center;
+}
+
+.aboutTitle__out-contact {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.contact-content {
+    align-self: center;
+}
+
+.contactBubble, .contactBubble1 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    background-color: $white;
+    width: 60px;
+    height: 60px;
+    // border-radius: 50%;
+
+    animation: contactBubble 2s ease-in-out 2s infinite alternate;
+}
+
+.contactBubble1{
+    animation: contactBubble1 2s ease-in-out 2s infinite alternate;
+}
+
+// fiverr link
+.fiverrLink-con{
+    background-color: #01b22e;
+    background-color: #01b22e;
+    text-align: center;
+
+    transition: all .3s ease-in-out;
+    
+
+    &:hover{
+            background-color: #fff;
+        .fiverrLink-img{
+            fill: #01b22e;
+        }
+        .fiverrLink-title{
+            color: #01b22e;    
+        }
+    }
+}
+.fiverrLink-img{
+    fill: #ffffff;
+    width: 100%;
+    height: 40px;
+    margin: auto;
+
+    transition: all .3s ease-in-out;
+}
+.fiverrLink{
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    padding: 15px;
+}
+.fiverrLink-title{
+    font-size: 15px;
+    color: #fff;
+    font-weight: 600;
+    margin: 0;
+    margin-bottom: 10px;
+    padding: 0;
+    transition: all .3s ease-in-out;
+}
+
+@keyframes contactBubble {
+    from{
+        left: 38%;
+    }
+    to{
+        left: 50%;
+        width: 0;
+    }
+}
+@keyframes contactBubble1 {
+    from{
+        left: 62%;
+    }
+    to{
+        left: 50%;
+        width: 0;
+    }
+}
+.contact-content{
+    display: flex;
+    flex-direction: column;
+}
+.social-link{
+    display: flex;
+    margin-bottom: 20px;
+    transform: translateX(100%);
+    img{
+        height: 30px;
+        width: 30px;
+    }
+    a{
+        margin-left: 10px;
+        text-decoration: none;
+        color: $darkGrey;
+        align-self: center;
+    }
+    a:hover{
+        text-decoration: underline;
+    }
+}
+
+footer{
+    padding: 20px 0;
+    background-color: $darkGrey;
+}
+
+.footerTitle{
+    text-align: center;
+    color: $white;
+
+}
+
+@media screen and (max-width: 1100px){
+    .contactBubble, .contactBubble1 {    
+        animation: contactBubble 3s ease-in-out 2s infinite alternate;
+    }
+    
+    .contactBubble1{
+        animation: contactBubble1 3s ease-in-out 2s infinite alternate;
+    }
+    @keyframes contactBubble {
+        from{
+            left: 20%;
+        }
+        to{
+            left: 50%;
+            width: 0;
+        }
+    }
+    @keyframes contactBubble1 {
+        from{
+            left: 80%;
+        }
+        to{
+            left: 50%;
+            width: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 550px){
+    .contactAnim{
+        display: none;
+    }
+    .contactAnim-static{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 470px){
+    .contactBubble, .contactBubble1 {    
+        animation: contactBubble 4s ease-in-out 2s infinite alternate;
+    }
+    
+    .contactBubble1{
+        animation: contactBubble1 4s ease-in-out 2s infinite alternate;
+    }
+    @keyframes contactBubble {
+        from{
+            left: 10%;
+        }
+        to{
+            left: 50%;
+            width: 0;
+        }
+    }
+    @keyframes contactBubble1 {
+        from{
+            left: 90%;
+        }
+        to{
+            left: 50%;
+            width: 0;
+        }
+    }
+}
+
+@media screen and (max-width: 365px){
+    .footerTitle{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 280px){
+    .fiverrLink-title{
+        font-size: 10px;
+    }
+    .fiverrLink-img{
+        height: 25px;
+    }
+}

@@ -1,0 +1,79 @@
+$white : #eeeeee;
+$lightBlue : #32E0C4;
+$lightGrey : #393E46;
+$darkGrey : #222831;
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    // font-family: 'Roboto Mono', monospace;
+    background-color: $white;
+    overflow-x: hidden;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1170px;
+    width: 100%;
+    padding: 0 15px;
+    margin: auto;
+}
+
+.alertPopup {
+    background-color: rgba(34, 40, 49, .8);
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+
+    display: none;
+}
+
+.alertPopup-card {
+    background-color: #fff;
+    margin: auto;
+    border-radius: 20px;
+    padding: 15px 20px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+
+    img {
+        display: block;
+        margin-left: auto;
+        height: 20px;
+        cursor: pointer;
+    }
+
+    h1 {
+        margin: 0;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .alertPopup {
+        display: flex;
+    }
+}
+
+
+
+@import 'intro';
+@import 'about';
+@import 'services';
+@import 'portfolio';
+@import 'contact';
+@import 'home-intro';
